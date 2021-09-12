@@ -2,21 +2,14 @@ package panics
 
 import "fmt"
 
-func Language(name string) {
-	switch name {
-	case "C":
-		fmt.Println(name)
-		break
-	case "C++":
-		fmt.Println(name)
-		break
-	case "Java":
-		fmt.Println(name)
-		break
-	case "Golang":
-		fmt.Println(name)
-		break
-	default:
-		panic(fmt.Sprintf("invalid name %q", name))
+func Calculate(num int) error {
+	for i := 0; i < 5; i++ {
+		divisor := num - i
+		if divisor == 0 {
+			panic("0 cannot be a divisor")
+		}
+		result := i / divisor
+		fmt.Println(result)
 	}
+	return nil
 }

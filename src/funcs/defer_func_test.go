@@ -1,11 +1,10 @@
 package funcs
 
 import (
-	"fmt"
+	"github.com/qinyudong89/go-demo/src/funcs/panics"
 	"testing"
 )
 
 func TestDefer(t *testing.T) {
-	err := Read("https://www.baidu.com44/")
-	fmt.Println(err)
+	panics.Calculate(2)
 }
